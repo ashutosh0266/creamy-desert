@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Now</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./../css/buy-now.css">
+  <link rel="stylesheet" href="./../css/footer.css">
+  <link rel="stylesheet" href="./../css/header.css">
+  <script src="./../JS/header.js"></script>
+</head>
+
+<body>
+  <div class="nav-container-main1 flex-display">
+    <div class="right-flex flex-display">
+        <img src="./imgs/menu.png" height="40px" class="hamburger-img-nav" onclick="openNav()" alt="">
+        <a href="./index.html"> <img src="./../imgs/logo1.png" class="navigationbar-logo" alt=""></a>
+    </div>
+    <div class="mid-flex">
+        <ul class="menu-list flex-display" type="none">
+            <li><a href="./../index.html">Home</a></li>
+            <li><a href="./../Pages/about-us.html">About Us</a></li>
+            <li><a href="./../Pages/contact-page.html">Contact Us</a></li>
+            <li><a href="./../Pages/services.html">Services</a></li>
+        </ul>
+    </div>
+    <div class="left-flex">
+        <img src="./../icons/magnifying-glass.png" class="nav-icons" alt="" onclick="openSearch()">
+        <a href="./../Pages/login-page.html"><img src="./../icons/add-contact.png" class="nav-icons login-icon"
+                alt=""></a>
+        <a href="./../Pages/review-page.html"><img src="./../icons/heart.png" class="nav-icons  heart-icon" alt=""></a>
+        <a href="./../Pages/add-to-cart.html"><img src="./../icons/shopping-bag.png" class="nav-icons" alt=""
+                onclick="openCarts()"></a>
+    </div>
+</div>
+<header>
+
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Search">x</span><br><br><br>
+        <h1 class="search-title">Search Your Favorite Ice-Cream </h1>
+        <h2 class="search-title">And Hit Enter...</h2>
+        <div class="overlay-content">
+            <form>
+                <input type="text" placeholder="Search Your Favorite Ice-Cream Here..." name="search">
+            </form>
+        </div>
+    </div>
+    <!-- <div id="mySidenav1" class="sidenav1">
+        <a href="javascript:void(0)" class="closebtn1" onclick="closeNavs()">&times;</a>
+        <p class="cart1">Shopping Cart</p>
+        <hr>
+    </div> -->
+
+   
+    <div class="slide-btn-comtain" onclick="changeBg()">
+        <img src="./../icons/new-moon.png" alt="" class="slide-btn" id="slide-btn"
+            onclick="changeSlideBtn('./imgs/s5.jpg')">
+        <img src="./../icons/oval.png" alt="" class="slide-btn btn-2" id="slide-btn1"
+            onclick="changeSlideBtn('./../imgs/s6.jpg')">
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="menu-list" type="none">
+            <li><a href="./../index.html">Home</a></li>
+            <li><a href="./../Pages/about-us.html">About Us</a></li>
+            <li><a href="./../Pages/contact-page.html">Contact Us</a></li>
+            <li><a href="./../Pages/services.html">Services</a></li>
+        </ul>
+    </div>
+
+
+</header>
+  
+
+  <div class="mb-5">
+    <div class="container">
+      <div class="row d-flex my-5 ms-md-5">
+        <div class="col-md-7 col-xs-12 bg-white border m-2 p-5 shadow">
+          <h3 class="identity">Shipping Information 🚗</h3>
+          <p class="my-2 mt-5">Full Name :</p>
+          <input type="text" placeholder="Your first and last name" required
+            class="w-100 p-2 px-3 rounded border border-black">
+          <p class="my-2 mt-4">Address :</p>
+          <textarea name="Message" rows="3" placeholder="Write your detail address" required
+            class="w-100 p-2 px-3 rounded border border-black"></textarea>
+          <div class="row my-2 mt-3 d-flex justify-content-between">
+            <div class="col-md-5 col-xs-12">
+              <p class="my-2">City :</p>
+              <input type="text" placeholder="Your city" required class="w-100 p-2 px-3 rounded border border-black">
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <p class="my-2">State :</p>
+              <input type="text" placeholder="Your state" required class="w-100 p-2 px-3 rounded border border-black">
+            </div>
+            <div class="col-md-3 col-xs-12">
+              <p class="my-2">ZIP Code</p>
+              <input type="number" placeholder="000-000" required class="w-100 p-2 px-3 rounded border border-black">
+            </div>
+          </div>
+          <div class="row my-2 mt-3 d-flex justify-content-between">
+            <div class="col-md-6 col-xs-12">
+              <p class="my-2">Mob. No. :</p>
+              <input type="number" placeholder="1234567890" required class="w-100 p-2 px-3 rounded border border-black">
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <p class="my-2">Email Address :</p>
+              <input type="text" placeholder="email@example.com" required class="w-100 p-2 px-3 rounded border border-black">
+            </div>
+          </div>
+          <input type="checkbox" class="my-2 mt-4"> Billing Address is same as shipping
+        </div>
+        <div class="col-md-4 col-xs-12 bg-white border m-2 p-5 pb-3 h-25 shadow">
+          <h3 class="mb-4">Order Summary</h3>
+          <div id="addToCard-Box">
+            
+          </div>
+          <div class="d-flex justify-content-between mt-3">
+            <p>Total</p>
+            <div class="ha" id="total-price">0</div>
+          </div>
+        </div>
+        <div class="col-md-7 col-xs-12 bg-white border m-2 p-5 shadow">
+          <h3 class="identity-2">Payment Information</h3>
+          <p class="my-2 mt-5">Credit Card Number :</p>
+          <input type="text" placeholder="**** **** **** ****" required
+            class="w-100 p-2 px-3 rounded border border-black">
+          <div class="row my-2 mt-3 d-flex justify-content-between">
+            <div class="col-md-5 col-xs-12">
+              <p class="my-2">CVV Number :</p>
+              <input type="text" placeholder="CVV" required class="w-100 p-2 px-3 rounded border border-black">
+            </div>
+            <div class="col-md-4 col-xs-6">
+              <p class="my-2">Exp. Month :</p>
+              <input type="text" placeholder="Month" required class="w-100 p-2 px-3 rounded border border-black">
+            </div>
+            <div class="col-md-3 col-xs-6">
+              <p class="my-2">Exp. Day :</p>
+              <input type="number" placeholder="Year" required class="w-100 p-2 px-3 rounded border border-black">
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 d-flex">
+          <button type="button" class="px-5 py-2 rounded border bag" onclick="alert('Fill Information Properly ⚠')">Place Your Order</button>
+          <h5 class="mt-2 ms-4">Need help? <a href="./../Pages/contact-page.html">Contact us!</a></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-5 c-bag">
+    <div class="container">
+      <h1 class="text-center mb-4">BEFORE PLACE CHECK THIS</h1>
+      <div class="row">
+        <div class="d-flex flex-wrap justify-content-evenly p-md-4">
+          <div class="card my-4 mx-4 shadow img-card-1" style="width: 18rem;">
+            <img src="./../imgs/buy-mow-page-img/chocolate.png" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title ">Teasty Chocolate-Ice-Cream</h5>
+              <p class="card-text">Sweet and Frozen</p>
+              <p><span class="me-5">50% OFF </span><span class="ms-5 ha"> &nbsp; Rs. 499/-</span></p>
+              <div class="d-flex justify-content-around">
+                <a href="#" onclick="addItem('./../imgs/buy-mow-page-img/chocolate.png','Bread slice Avocado','499'),alert('Your Order Add Successfully 🎊🎉')">Add to Card</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card my-4 mx-4 shadow img-card-1" style="width: 18rem;">
+            <img src="./../imgs/buy-mow-page-img/Mangoo.png" height="60%" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title ">Delicious Mango-Ice-Cream</h5>
+              <p class="card-text ">Chill with Cremy!</p>
+              <p><span class="me-5">50% OFF </span><span class="ms-5 ha"> &nbsp; Rs. 399/-</span></p>
+              <div class="d-flex justify-content-around">
+                <a href="#" onclick="addItem('../../img/buy-mow-page-img/Mangoo.png','Delicious Mango-Ice-Cream','699'),alert('Your Order Add Successfully 🎊🎉')">Add to Card</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card my-4 mx-4 shadow img-card-1" style="width: 18rem;">
+            <img src="./../imgs/buy-mow-page-img/strawberry.png" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title ">strawberry-Bite</h5>
+              <p class="card-text">Melting for it!</p>
+              <p><span class="me-5">50% OFF </span><span class="ms-5 ha"> &nbsp; Rs. 229/-</span></p>
+              <div class="d-flex justify-content-around">
+                <a href="#" onclick="addItem('./../imgs/buy-mow-page-img/strawberry.png','Cheese Burger','229'),alert('Your Order Add Successfully 🎊🎉')">Add to Card</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="main">
+
+    <div class="foot ">Quick Links
+        <hr>
+
+        <div class="footer"><i class="fa-solid fa-house fa-sol"></i>&nbsp;&nbsp;<a href="./../index.html"
+                class="b">Home</a>
+        </div>
+        <div class="footer "><i class="fa-solid fa-gear fa-sol"></i>&nbsp;&nbsp;<a href="./../Pages/services.html"
+                class="b">Services
+            </a></div>
+        <div class="footer "><i class="fa-solid fa-list fa-sol"></i>&nbsp;&nbsp;&nbsp;<a href="./../Pages/menu-page.html"
+                class="b">Menu</a></div>
+        <div class="footer "><i class="fa-solid fa-cart-shopping fa-sol"></i>&nbsp;&nbsp;<a href="./../Pages/product-card.html"
+                class="b">Store</a></div>
+        <div class="footer "><i class="fa-solid fa-file-pen fa-sol"></i>&nbsp;&nbsp;<a href="./../Pages/registration.html"
+                class="b">Registration</a></div>
+        <div class="footer "><i class="fa-solid fa-thumbs-up fa-sol"></i>&nbsp;&nbsp;<a href="./../Pages/review-page.html"
+                class="b">Review</a></div>
+        <div class="footer "><i class="fa-solid fa-user fa-sol"></i>&nbsp;&nbsp;<a href="./../Pages/about-us.html"
+                class="b">About Us</a></div>
+
+
+    </div>
+
+
+    <div class="contact1">Contact Us
+      <hr>
+      <div class="footer"><i class="fa-solid fa-phone-volume fa-sol"></i>&nbsp;&nbsp;<a href="tel:8126438351"
+              class="b">+91 8126438351</a></div>
+      <div class="footer "><i class="fa-solid fa-envelope fa-sol"></i>&nbsp;&nbsp;<a
+              href="mailto: bhushanpotdar3@gmail.com" class="bb"> ashutoshpratap26@gmail.com</a></div>
+
+      <div class="footer mt-4">&nbsp;&nbsp;<a href="https://www.instagram.com/" onclick="return ready()" class="a"
+              target="_blank"><i class="fa-brands fa-instagram fa-brand"></i></a>&emsp;<a
+              href="https://www.linkedin.com/in/ashutosh026" onclick="return ready()" class="a" target="_blank"><i
+                  class="fa-brands fa-linkedin fa-brand"></i></a>&emsp;<a href="https://wa.me/8126438351" onclick="return ready()"
+              class="a" target="_blank"><i class="fa-brands fa-whatsapp fa-brand"></i></a>
+          &emsp;<a href="https://github.com/ashutosh0266" onclick="return ready()" class="a" target="_blank"><i
+                  class="fa-brands fa-github fa-brand"></i></a></div>
+      <br>
+
+  </div>
+  <div class="location">Location
+      <hr>
+      <div class="footer"><i class="fa-solid fa-location-dot fa-sol"></i></i>&nbsp;&nbsp;<a
+              href="https://maps.app.goo.gl/46TfsN1ChexaHVKv8" class="b">Jalandhar <br> Phagwara 144411
+          </a></div>
+      <div class="footer "><iframe class="mapl"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109075.74629313087!2d75.78562682349286!3d31.314327247690912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1745211556215!5m2!1sen!2sin"
+              width="280" height="170" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+
+</footer>
+<center style="background-color: rgb(32, 31, 31); margin-bottom:0%; padding:0%; color:white ">Copyright &copy 2025
+    All
+    Rights Reserved</center>
+
+<script src="https://kit.fontawesome.com/0dcf08ad5b.js" crossorigin="anonymous"></script>
+
+
+<script>
+    function ready() {
+        let confValue = confirm("Are You Sure? You want to move to another page!")
+        if (confValue == true) {
+            return true
+
+        }
+        else {
+            return false
+        }
+    }
+    </script>
+  </body>
+  </html>
+
+
+  
